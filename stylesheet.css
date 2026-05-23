@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-image: url(https://w.wallhaven.cc/full/k8/wallhaven-k81776.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
