@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    color: white;
 }
 
 body {
@@ -49,7 +50,7 @@ body {
     justify-content: center;
     align-self: center;
     background-color: rgba(176, 176, 171, 0.438);
-    padding: 1rem 1.5rem;
+    padding: 2rem 2.5rem;
     border-radius: 0.5em;
     border: 5px solid rgba(233, 216, 216, 0.482);
 }
@@ -60,8 +61,54 @@ body {
 }
 .postup-inner h6{
     font-size: large;
-    color: rgba(0, 0, 0, 0.778);
+    margin: 0;
 }
-.postup span{
-   margin-top: 0;
+.line{
+   width: 100%;
+   height: 2px;
+   background-color: white;
+   margin: 2em 0 2.2em 0;
+}
+
+.menu-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: rgba(176, 176, 171, 0.438);
+    border: 5px solid rgba(233, 216, 216, 0.482);
+    border-radius: 0.5em;
+    gap: 2em;
+    cursor: pointer;
+}
+.filtry{
+    margin-top: 2em;
+}
+.vertikal{
+    background-color: white;
+    height: 2em;
+    width: 2px;
+}
+
+.object{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    background-color: rgba(176, 176, 171, 0.438);
+    border: 5px solid rgba(233, 216, 216, 0.482);
+}
+
+.square{
+    background-color: rgba(176, 176, 171, 0.438);
+    border: 5px solid rgba(233, 216, 216, 0.482);
+    border-radius: 0.2em;
+    width: 2em;
+    height: 2em;
+    
+}
+
+.object-body{
+    margin: 0;
+    display: flex;
 }
