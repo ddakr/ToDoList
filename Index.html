@@ -1,100 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <title>ToDoList|JS Mastery</title>
+    <title>ToDoList</title>
 </head>
 <body>
-<div class="wrapper">
-    <div class="wrapper-inner">
-        <div class="heading">
-            <h1>
-                Moje úkoly
-            </h1>
 
-            <h4>hotovo</h4>
+<div class="wrapper">
+    <div class="inner-wrapper">
+
+        <!-- HEADING -->
+        <div class="heading">
+            <h1>Moje úkoly</h1>
+            <div class="hotovo-box">
+                <span class="count" id="count">0/0</span>
+                hotovo
+            </div>
         </div>
+
+        <!-- PROGRESS BAR -->
         <div class="postup">
             <div class="postup-inner">
-                <h6>
-                    postup
-                </h6>
-                <h6>
-                    %
-                </h6>
+                <span>Postup</span>
+                <span id="pct-label">0%</span>
             </div>
-            <div class="line"></div>
+            <div class="line">
+                <div class="line-fill" id="line-fill"></div>
+            </div>
         </div>
+
+        <!-- INPUT + PRIORITY + PŘIDAT -->
         <div class="menu">
-            <!-- dodelat psani -->
-
+            <input id="inp" type="text" placeholder="Co je potřeba udělat?" />
             <div class="menu-wrapper">
-                <div class="buttons">
-                     <button>
-                    Vysoká
-                </button>
-                <button>
-                    Střední
-                </button>
-                <button>
-                    Nízká
-                </button>
+                <div class="buttons prio-group">
+                    <button class="btn-prio btn-high active" onclick="setPrio('high', this)">Vysoká</button>
+                    <button class="btn-prio btn-mid" onclick="setPrio('mid', this)">Střední</button>
+                    <button class="btn-prio btn-low" onclick="setPrio('low', this)">Nízká</button>
                 </div>
-               <div class="buttons">
-                <button>
-                    Přidat
-                </button>
-               </div>
+                <div class="buttons">
+                    <button class="btn-pridat" onclick="add()">Přidat</button>
+                </div>
             </div>
-
         </div>
+
+        <!-- FILTRY -->
         <div class="filtry">
             <div class="buttons-row">
-                <button>
-                    Vše
-                </button>
-                <button>
-                    Vysoká
-                </button>
-                <button>
-                    Střední
-                </button>
-                <button>
-                    Nízká
-                </button>
+                <button class="filter-btn active" onclick="setFilter('vse', this)">Vše</button>
+                <button class="filter-btn" onclick="setFilter('high', this)">Vysoká</button>
+                <button class="filter-btn" onclick="setFilter('mid', this)">Střední</button>
+                <button class="filter-btn" onclick="setFilter('low', this)">Nízká</button>
+                <button class="filter-btn" onclick="setFilter('done', this)">Hotové</button>
             </div>
         </div>
-        <div class="object">
-            <div class="vertikal"></div>
-            
-            <div class="checkbox">
-                <div class="square"></div>
-            </div>
-            <div class="object-body">
 
-                <div class="object-inner">
-                    <h4>Odevzdat</h4>
+        <!-- SEZNAM ÚKOLŮ -->
+        <div id="list"></div>
 
-                    <h6><i class="fa-solid fa-alarm-clock"></i> time</h6>
-                    
-                    <form action="time"></form>
-
-                </div>
-                
-                <div class="priority">
-                    <h5>Priorita</h5>
-                </div>
-                <div class="delete">
-                    <!-- dodelat pomocí knihovny -->
-                </div>
-            </div>
-        </div>
     </div>
 </div>
-   
+
 <script src="index.js"></script>
 </body>
 </html>
