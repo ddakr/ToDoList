@@ -4,7 +4,6 @@ let prio = 'high';
 let filter = 'vse';
 let items = [];
 
-// ── Local Storage ─────────────────────────────────────
 
 function uloz() {
     localStorage.setItem('todoItems', JSON.stringify(items));
